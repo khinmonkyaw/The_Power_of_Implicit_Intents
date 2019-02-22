@@ -24,7 +24,7 @@
         android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+
         android:layout_margin="@dimen/margin_medium_2"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -36,7 +36,8 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/btn_record"
             android:text="Record"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_xlarge"/>
 
         <FrameLayout
 
