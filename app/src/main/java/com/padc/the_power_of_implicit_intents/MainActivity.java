@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_VIDEO_CAPTURE = 1;
     private static final int REQUEST_SELECT_CONTACT =2 ;
     Uri videoUrl;
+
+    
     private Button btnTimer, btnCalender, btnVideo, btnPhoneContact, btnWeb;
     private VideoView vvVideo;
     private TextView tv_name, tv_no;
