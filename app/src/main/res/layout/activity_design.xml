@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_medium_2"
+       android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_video_calender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_video"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            android:layout_alignParentRight="true">
+
+
+            <ImageView
+                android:id="@+id/iv_calender"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_calendar"
+                />
+
+        </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/rl_video_calender"
+           android:layout_margin="@dimen/margin_xxlarge"
+           >
+            <ImageView
+                android:id="@+id/iv_timer"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_timer"
+                />
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_phone_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_timer">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp"
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_phone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_phone"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp"
+               android:layout_alignParentRight="true"
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_web"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_website"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

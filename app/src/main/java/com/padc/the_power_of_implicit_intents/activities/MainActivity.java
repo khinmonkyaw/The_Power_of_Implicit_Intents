@@ -1,4 +1,4 @@
-package com.padc.the_power_of_implicit_intents;
+package com.padc.the_power_of_implicit_intents.activities;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -26,6 +26,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.padc.the_power_of_implicit_intents.R;
+
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Calendar;
@@ -36,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_SELECT_CONTACT =2 ;
     Uri videoUrl;
 
-    
+
     private Button btnTimer, btnCalender, btnVideo, btnPhoneContact, btnWeb;
     private VideoView vvVideo;
     private TextView tv_name, tv_no;
+
 
 
 
@@ -168,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(requestCode == REQUEST_SELECT_CONTACT)
         {
-            String phoneNo="",name ="";
+            String phoneNo="",name ="",profile ="";
             int index;
             Uri contactUri = data.getData();
             Cursor cursorName = getContentResolver().query(contactUri,null,null,null,null);
@@ -185,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
                         ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + contactId, null, null);
                 while (phones.moveToNext()) {
                     String number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+
                     phoneNo = number;
                     int type = phones.getInt(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE));
                     switch (type) {
@@ -212,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
             tv_name.setText(name);
             tv_no.setText(phoneNo);
+
 
 
 
